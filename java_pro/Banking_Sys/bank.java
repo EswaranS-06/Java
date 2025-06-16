@@ -46,7 +46,12 @@ public class bank {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        bank acc = new bank("Rex", 2726);
+        System.out.println("Welcome To CLI Banking System");
+        System.out.print("Enter Your Name: ");
+        String name = sc.nextLine();
+        System.out.print("Enter Your A/c No: ");
+        int ac_no = sc.nextInt();
+        bank acc = new bank(name, ac_no);
         System.out.println("1.Deposit\n2.Withdraw\n3.Balance Check\n0.Exit");
         loop: while (true){
             System.out.print("Enter your choise: ");
@@ -65,5 +70,6 @@ public class bank {
                 
             }
         }
+        sc.close();
     }
 }
